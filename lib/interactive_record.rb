@@ -22,8 +22,7 @@ class InteractiveRecord
   
   def initialize(options={})
     options.each do |property, value|
-      property = :id ? pass :
-      self.send("#{property}=", value)
+      self.send("#{property}=", value) if property != :id
     end
   end
   
