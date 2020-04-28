@@ -53,6 +53,6 @@ class InteractiveRecord
   end
   
   def self.find_by(hash={})
-    DB[:conn].execute("select * from #{self.table_name} where #{hash.keys.to_s} = ?", hash.values)
+    DB[:conn].execute("select * from #{self.table_name} where #{} = ?", hash.values)
   end
 end
